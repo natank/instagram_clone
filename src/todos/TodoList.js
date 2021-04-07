@@ -4,7 +4,7 @@ import NewTodoForm from './NewTodoForm';
 import { connect } from 'react-redux';
 import { removeTodo, completeTodo } from './actions';
 import { displayAlert } from './thunks';
-import {loadTodos} from './thunks';
+import {loadTodos, removeTodoRequest} from './thunks';
 
 import './TodoListItem.css';
 const TodoList = ({
