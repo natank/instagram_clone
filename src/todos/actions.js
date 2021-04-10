@@ -11,25 +11,24 @@ export const removeTodo = todo => ({
 });
 
 export const COMPLETE_TODO = 'COMPLETE_TODO';
-export const completeTodo = text => ({
+export const completeTodo = todo => ({
 	type: COMPLETE_TODO,
-	payload: { text },
+	payload: { todo },
 });
 
+export const LOAD_TODOS_IN_PROGRESS = 'LOAD_TODOS_IN_PROGRESS';
+export const loadTodosInProgress = () => ({
+	type: LOAD_TODOS_IN_PROGRESS,
+});
 
-export const LOAD_TODOS_IN_PROGRESS = 'LOAD_TODOS_IN_PROGRESS'
-export const loadTodosInProgress = ()	=>({
-	type: LOAD_TODOS_IN_PROGRESS
-})
-
-export const LOAD_TODOS_SUCCESS = 'LOAD_TODOS_SUCCESS'
-export const loadTodosSuccess = todos =>({
+export const LOAD_TODOS_SUCCESS = 'LOAD_TODOS_SUCCESS';
+export const loadTodosSuccess = todos => ({
 	type: LOAD_TODOS_SUCCESS,
-	payload: {todos}
-})
+	payload: { todos },
+});
 
-export const LOAD_TODOS_FAILURE = 'LOAD_TODOS_FAILURE'
-export const loadTodosFailure = todos =>({
+export const LOAD_TODOS_FAILURE = 'LOAD_TODOS_FAILURE';
+export const loadTodosFailure = todos => ({
 	type: LOAD_TODOS_FAILURE,
-	payload: {todos}
-})
+	payload: { todos },
+});
